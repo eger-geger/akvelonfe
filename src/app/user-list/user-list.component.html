@@ -1,0 +1,16 @@
+<div class="panel panel-default">
+  <div class="panel-heading">Users</div>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor='let user of users'>
+      <span class='name'>{{user.firstname}} {{user.lastname}}</span>
+
+      <span class='email'>{{user.email}}</span>
+
+      <div class="pull-right">
+        <a (click)='onEdit.emit(user)'>edit</a>
+        <span>/</span>
+        <a (click)='onRemove.emit(user)'>remove</a>
+      </div>
+    </li>
+  </ul>
+</div>
